@@ -1,5 +1,9 @@
 package services;
 
+import java.util.List;
+
 public interface IConverteDados {
-    <T> T ConverteDados(String json, Class<T> classe);
+    <T> T converteDados(String json, Class<T> classe);
+
+    <T> List<T> obterLista(String json, Class<T> classe);
 }
