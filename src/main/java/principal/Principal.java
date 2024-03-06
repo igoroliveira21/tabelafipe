@@ -75,6 +75,7 @@ public class Principal {
         endereco = endereco + "/" + codigoModelo + "/anos";
         json = consumo.obterDados(endereco);
         List<Dados> anos = conversor.obterLista(json, Dados.class);
+        System.out.println(anos);
         List<Veiculo> veiculos = new ArrayList<>();
         for (int i = 0; i < anos.size(); i++) {
             var enderecoAnos = endereco + "/" + anos.get(i).codigo();
